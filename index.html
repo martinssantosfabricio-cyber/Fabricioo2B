@@ -3,57 +3,512 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portifolio</title>
+
+    <title>Portfólio | Turma 2º B</title>
+
+    <style>
+        /* ===== CONFIGURAÇÕES GERAIS ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0f172a;
+            color: #e2e8f0;
+            line-height: 1.7;
+        }
+
+        /* ===== CABEÇALHO ===== */
+        header {
+            background: linear-gradient(135deg, #2563eb, #7c3aed);
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        header p {
+            font-size: 18px;
+            color: #e0e7ff;
+        }
+
+        /* ===== MENU ===== */
+        nav {
+            background: #020617;
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #334155;
+        }
+
+        nav a {
+            color: #cbd5e1;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #60a5fa;
+        }
+
+        /* ===== CONTEÚDO ===== */
+        main {
+            width: 90%;
+            max-width: 1100px;
+            margin: 40px auto;
+        }
+
+        section {
+            background: #1e293b;
+            margin-bottom: 30px;
+            padding: 35px;
+            border-radius: 18px;
+            border: 1px solid #334155;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+        }
+
+        section h2 {
+            color: #60a5fa;
+            font-size: 30px;
+            margin-bottom: 20px;
+            border-left: 5px solid #7c3aed;
+            padding-left: 12px;
+        }
+
+        section h3 {
+            color: #a78bfa;
+            font-size: 24px;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+
+        section p {
+            color: #cbd5e1;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        /* ===== CARDS DOS PROJETOS ===== */
+        .projetos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .card {
+            background: #0f172a;
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid #334155;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            border-color: #60a5fa;
+            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.2);
+        }
+
+        .card h3 {
+            color: #60a5fa;
+            margin-top: 0;
+        }
+
+        .card p {
+            font-size: 15px;
+            text-align: left;
+        }
+
+        /* ===== DESTAQUE ===== */
+        .destaque {
+            background: linear-gradient(135deg, #172554, #312e81);
+            border: 1px solid #6366f1;
+        }
+
+        .destaque h2 {
+            color: #c4b5fd;
+        }
+
+        /* ===== RODAPÉ ===== */
+        footer {
+            background: #020617;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 50px;
+            color: #94a3b8;
+            border-top: 1px solid #334155;
+        }
+
+        footer strong {
+            color: #60a5fa;
+        }
+
+        /* ===== RESPONSIVIDADE ===== */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 35px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px 8px;
+                font-size: 14px;
+            }
+
+            section {
+                padding: 22px;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Biografia</h1>
-    <p>Olá! Nós somos a turma do 2ºB, um grupo dedicado ao desenvolvimento intelectual, à inovação e à aplicação prática do conhecimento científico e tecnológico.
-        Neste 2º trimestre, estamos explorando o universo do desenvolvimento web e mobile. Na prática, aprendemos a criar um aplicativo utilizando HTML, e, simultaneamente, aplicamos esses conhecimentos na construção deste site.
-        Cada um de nós tem dado o seu melhor para transformar dedicação em projetos reais
-        O resultado de todo o nosso esforço, criatividade e aprendizado coletivo está reunido aqui.
 
-        Convidamos você a explorar nosso espaço digital e a acompanhar os frutos do nosso trabalho em equipe.
-    </p>
+    <!-- CABEÇALHO -->
+    <header>
+        <h1>🚀 Portfólio 2º B</h1>
+        <p>Ciência, Tecnologia, Robótica e Programação</p>
+    </header>
 
-    <h2>PROJETO INTREGADOR</h2>
-    <p>🚀 Bem-vindo ao nosso espaço!
-Aqui a gente compartilha a nossa jornada nesse 2º trimestre do Projeto Integrador.
+    <!-- MENU -->
+    <nav>
+        <a href="#biografia">Biografia</a>
+        <a href="#projeto">Projeto Integrador</a>
+        <a href="#robotica">Robótica</a>
+        <a href="#fisica">Física</a>
+        <a href="#programacao">Programação</a>
+    </nav>
 
-Esquece aquela ideia de matérias separadas: aqui a Robótica, a Física, a Tecnociência e a Programação se conectam para virar uma coisa só. Os conteúdos se complementam de um jeito que tudo faz sentido, resultando no nosso produto final:
+    <main>
 
-✨ Este site incrível e todos os projetos que a gente desenvolveu durante as aulas!
+        <!-- BIOGRAFIA -->
+        <section id="biografia">
+            <h2>👥 Biografia</h2>
 
-Vem com a gente explorar tudo o que rolou por aqui! 🧠💻🤖</p>
-    
-    <h3>Robotica</h3>
-    <p>A Experiência em Robótica: Da Concepção à Prática
-No âmbito do nosso Projeto Integrador, a Robótica consolida-se como o eixo central para a aplicação prática dos conceitos teóricos estudados em sala de aula. Por meio da integração entre hardware, eletrônica e lógica de programação, nossa turma desenvolveu uma série de projetos que unem a precisão científica à inovação tecnológica.
+            <p>
+                Olá! Nós somos a turma do 2º B, um grupo dedicado ao
+                desenvolvimento intelectual, à inovação e à aplicação prática
+                do conhecimento científico e tecnológico.
+            </p>
 
-Abaixo, detalhamos os principais trabalhos práticos desenvolvidos ao longo do trimestre:
+            <p>
+                Neste 2º trimestre, estamos explorando o universo do
+                desenvolvimento web e mobile. Na prática, aprendemos a criar
+                projetos utilizando HTML, programação e conceitos de tecnologia,
+                aplicando esses conhecimentos na construção deste site.
+            </p>
 
-🌀 Disco de Newton: Experimento voltado à compreensão da decomposição e síntese da luz branca, integrando conceitos de física óptica ao controle mecânico e de rotação.
+            <p>
+                Cada integrante da turma contribuiu com ideias, criatividade,
+                dedicação e trabalho em equipe para transformar aquilo que
+                aprendemos em sala de aula em projetos reais.
+            </p>
 
-📈 LED Fade-in e Fade-out: Aplicação técnica da Modulação por Largura de Pulso (PWM) para controlar de forma gradual e fluida a intensidade luminosa dos diodos, aprofundando o domínio sobre sinais analógicos e digitais.
+            <p>
+                Mais do que aprender conteúdos, essa experiência nos permitiu
+                desenvolver habilidades importantes como comunicação,
+                colaboração, pensamento crítico, resolução de problemas e
+                criatividade.
+            </p>
 
-🎨 LED RGB: Manipulação avançada de cores através da combinação de três canais independentes (Vermelho, Verde e Azul), permitindo a criação de uma vasta gama cromática por meio de programação de microcontroladores.
-
-👁️ Sensor de Presença: Utilização de tecnologias de detecção (como infravermelho ou ultrassom) para identificar movimento no ambiente e acionar respostas automatizadas, simulando sistemas de segurança inteligentes.
-
-🚦 Semáforo de Cruzamento para Carros: Desenvolvimento da lógica de controle urbano e temporização de tráfego, estruturando sequências automatizadas para a gestão segura de fluxos viários.
-
-⚠️ Sensor de Gás e Fumaça: Implementação de sistemas de monitoramento ambiental e segurança, capazes de detectar a presença de gases nocivos ou fumaça no ar e emitir alertas preventivos.
-
-🤖 Robô Seguidor de Linhas: O ápice prático da integração sistêmica, unindo sensores ópticos de reflexão, algoritmos de controle de direção e motores de tração diferencial para garantir a navegação autônoma do robô sobre um trajeto pré-determinado.
-
-Através desses projetos, a robótica deixou de ser apenas um conceito abstrato para se transformar em ferramentas reais de engenharia, estimulando o pensamento crítico, a precisão técnica e a resolução colaborativa de problemas.
-</p>
-
-<h4>Fisica e Tecnociência</h4>
-
-<h5>programação</h5>
-<p></p>
+            <p>
+                O resultado de todo o nosso esforço e aprendizado coletivo está
+                reunido aqui. Convidamos você a explorar nosso espaço digital e
+                conhecer um pouco mais sobre os projetos desenvolvidos pela
+                turma 2º B.
+            </p>
+        </section>
 
 
+        <!-- PROJETO INTEGRADOR -->
+        <section id="projeto" class="destaque">
+
+            <h2>🧠 Projeto Integrador</h2>
+
+            <p>
+                🚀 Bem-vindo ao nosso espaço!
+            </p>
+
+            <p>
+                Aqui compartilhamos a nossa jornada durante o 2º trimestre do
+                Projeto Integrador.
+            </p>
+
+            <p>
+                Esqueça aquela ideia de matérias separadas: neste projeto,
+                Robótica, Física, Tecnociência e Programação se conectam para
+                formar um conhecimento integrado.
+            </p>
+
+            <p>
+                Os conteúdos estudados em cada área se complementam e nos
+                ajudam a compreender como a ciência e a tecnologia estão
+                presentes na criação de soluções para problemas reais.
+            </p>
+
+            <p>
+                ✨ O resultado de todo esse processo é este site e todos os
+                projetos que desenvolvemos durante as aulas.
+            </p>
+
+            <p>
+                Ao longo dessa jornada, aprendemos que errar também faz parte
+                do processo. Cada tentativa, teste e correção contribuiu para
+                melhorar nossas habilidades e entender melhor como transformar
+                uma ideia em realidade.
+            </p>
+
+        </section>
+
+
+        <!-- ROBÓTICA -->
+        <section id="robotica">
+
+            <h2>🤖 Robótica</h2>
+
+            <p>
+                A Robótica foi uma das principais áreas trabalhadas durante o
+                Projeto Integrador. Por meio dela, conseguimos transformar
+                conceitos teóricos em experiências práticas.
+            </p>
+
+            <p>
+                Trabalhamos com componentes eletrônicos, sensores, LEDs,
+                motores e programação, aprendendo como diferentes partes de um
+                sistema podem trabalhar juntas para executar uma determinada
+                função.
+            </p>
+
+            <p>
+                A experiência também ajudou a desenvolver nosso raciocínio
+                lógico, nossa capacidade de solucionar problemas e nossa
+                criatividade.
+            </p>
+
+            <div class="projetos">
+
+                <div class="card">
+                    <h3>🌀 Disco de Newton</h3>
+
+                    <p>
+                        Experimento voltado à compreensão da decomposição e
+                        síntese da luz branca. Através da rotação do disco,
+                        observamos como diferentes cores podem se combinar,
+                        relacionando conceitos de Física Óptica com a prática.
+                    </p>
+                </div>
+
+
+                <div class="card">
+                    <h3>💡 LED Fade-in e Fade-out</h3>
+
+                    <p>
+                        Projeto que utiliza PWM para controlar gradualmente a
+                        intensidade de um LED. Com isso, conseguimos criar o
+                        efeito de aumento e diminuição da luminosidade,
+                        relacionando programação e eletrônica.
+                    </p>
+                </div>
+
+
+                <div class="card">
+                    <h3>🎨 LED RGB</h3>
+
+                    <p>
+                        Utilizamos um LED RGB para controlar as cores vermelho,
+                        verde e azul. Com a combinação dessas três cores,
+                        conseguimos produzir diferentes tonalidades através da
+                        programação.
+                    </p>
+                </div>
+
+
+                <div class="card">
+                    <h3>👁️ Sensor de Presença</h3>
+
+                    <p>
+                        Utilizamos sensores para detectar movimentos no
+                        ambiente e realizar ações automaticamente. Esse projeto
+                        demonstra uma aplicação da tecnologia em sistemas de
+                        segurança e automação.
+                    </p>
+                </div>
+
+
+                <div class="card">
+                    <h3>🚦 Semáforo</h3>
+
+                    <p>
+                        Desenvolvemos uma simulação de semáforo de cruzamento,
+                        trabalhando com LEDs e temporização. O projeto
+                        representa como sistemas automatizados podem organizar
+                        o trânsito e aumentar a segurança.
+                    </p>
+                </div>
+
+
+                <div class="card">
+                    <h3>⚠️ Sensor de Gás e Fumaça</h3>
+
+                    <p>
+                        Projeto destinado ao monitoramento do ambiente.
+                        Utilizamos sensores capazes de identificar alterações
+                        na qualidade do ar e emitir alertas, demonstrando uma
+                        possível aplicação da tecnologia na prevenção de
+                        acidentes.
+                    </p>
+                </div>
+
+
+                <div class="card">
+                    <h3>🤖 Robô Seguidor de Linha</h3>
+
+                    <p>
+                        Um dos projetos mais completos do trimestre. O robô
+                        utiliza sensores para identificar uma linha e motores
+                        para controlar sua direção, permitindo que ele percorra
+                        um caminho de forma automatizada.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FÍSICA E TECNOCIÊNCIA -->
+        <section id="fisica">
+
+            <h2>⚡ Física e Tecnociência</h2>
+
+            <p>
+                A Física esteve presente em diversos projetos desenvolvidos
+                durante o trimestre. Por meio dos experimentos, conseguimos
+                perceber que conceitos estudados em sala de aula podem ser
+                aplicados diretamente na tecnologia.
+            </p>
+
+            <p>
+                Conceitos relacionados à luz, movimento, eletricidade, energia,
+                velocidade e sensores foram importantes para compreender como
+                nossos projetos funcionavam.
+            </p>
+
+            <p>
+                A Tecnociência também teve um papel importante, pois mostrou
+                que ciência e tecnologia estão diretamente relacionadas.
+                Atualmente, muitos avanços tecnológicos surgem justamente da
+                união entre conhecimento científico, criatividade e inovação.
+            </p>
+
+            <p>
+                Durante o projeto, percebemos que a tecnologia não serve apenas
+                para criar equipamentos modernos, mas também pode ser utilizada
+                para resolver problemas, facilitar tarefas e melhorar a vida
+                das pessoas.
+            </p>
+
+        </section>
+
+
+        <!-- PROGRAMAÇÃO -->
+        <section id="programacao">
+
+            <h2>💻 Programação</h2>
+
+            <p>
+                A programação foi essencial para transformar nossas ideias em
+                sistemas que realmente funcionam.
+            </p>
+
+            <p>
+                Durante as atividades, tivemos contato com lógica de
+                programação, comandos, variáveis, condições e estruturas
+                necessárias para controlar componentes eletrônicos.
+            </p>
+
+            <p>
+                Além disso, aprendemos os primeiros conceitos de desenvolvimento
+                web utilizando HTML. Com ele, conseguimos estruturar textos,
+                títulos, seções e informações para criar este portfólio.
+            </p>
+
+            <p>
+                Também percebemos que programar envolve muito mais do que
+                escrever códigos. É necessário pensar em uma solução, testar,
+                identificar erros, corrigir problemas e tentar novamente.
+            </p>
+
+            <p>
+                🚀 O desenvolvimento deste site representa justamente essa
+                evolução: começamos com códigos simples e fomos acrescentando
+                organização, estilo e criatividade para chegar ao resultado
+                apresentado aqui.
+            </p>
+
+        </section>
+
+
+        <!-- CONCLUSÃO -->
+        <section>
+
+            <h2>🌟 O que aprendemos</h2>
+
+            <p>
+                Ao longo do trimestre, tivemos a oportunidade de aprender não
+                apenas conteúdos técnicos, mas também habilidades que podem ser
+                utilizadas em diferentes situações.
+            </p>
+
+            <p>
+                Aprendemos que trabalhar em equipe, compartilhar ideias,
+                respeitar diferentes opiniões e buscar soluções são partes
+                fundamentais para desenvolver um bom projeto.
+            </p>
+
+            <p>
+                Nosso maior aprendizado foi perceber que ciência, tecnologia e
+                criatividade podem trabalhar juntas para transformar ideias em
+                projetos reais.
+            </p>
+
+            <p>
+                Este portfólio representa uma parte da nossa trajetória e de
+                tudo que construímos juntos durante o 2º trimestre.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- RODAPÉ -->
+    <footer>
+        <p>
+            🚀 <strong>Turma 2º B</strong> — Projeto Integrador
+        </p>
+
+        <p>
+            Ciência • Tecnologia • Robótica • Física • Programação
+        </p>
+
+        <p>
+            © 2026 - Todos os projetos desenvolvidos pela turma.
+        </p>
+    </footer>
 
 </body>
 </html>
