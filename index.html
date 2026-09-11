@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,9 @@
     <title>Portfólio | Turma 2º B</title>
 
     <style>
+
         /* ===== CONFIGURAÇÕES GERAIS ===== */
+
         * {
             margin: 0;
             padding: 0;
@@ -22,119 +25,137 @@
             line-height: 1.7;
         }
 
+
         /* ===== CABEÇALHO ===== */
+
         header {
             background: linear-gradient(135deg, #2563eb, #7c3aed);
-            padding: 60px 20px;
+            padding: 70px 20px;
             text-align: center;
         }
 
         header h1 {
-            font-size: 48px;
-            margin-bottom: 10px;
+            font-size: 52px;
+            margin-bottom: 12px;
             color: white;
         }
 
         header p {
-            font-size: 18px;
+            font-size: 19px;
             color: #e0e7ff;
         }
 
+
         /* ===== MENU ===== */
+
         nav {
             background: #020617;
             padding: 15px;
             text-align: center;
+
             position: sticky;
             top: 0;
+
             z-index: 100;
+
             border-bottom: 1px solid #334155;
         }
 
         nav a {
+            display: inline-block;
+
             color: #cbd5e1;
+
             text-decoration: none;
-            margin: 0 15px;
+
+            margin: 5px 10px;
+
+            padding: 8px 14px;
+
+            border-radius: 20px;
+
             font-weight: bold;
+
             transition: 0.3s;
         }
 
         nav a:hover {
-            color: #60a5fa;
+            color: white;
+            background: #2563eb;
         }
 
+
         /* ===== CONTEÚDO ===== */
+
         main {
             width: 90%;
             max-width: 1100px;
-            margin: 40px auto;
+
+            margin: 45px auto;
         }
 
         section {
             background: #1e293b;
+
             margin-bottom: 30px;
+
             padding: 35px;
+
             border-radius: 18px;
+
             border: 1px solid #334155;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+
+            box-shadow:
+                0 10px 30px rgba(0, 0, 0, 0.25);
         }
+
+
+        /* ===== TÍTULOS ===== */
 
         section h2 {
             color: #60a5fa;
+
             font-size: 30px;
+
             margin-bottom: 20px;
+
             border-left: 5px solid #7c3aed;
+
             padding-left: 12px;
         }
 
         section h3 {
             color: #a78bfa;
+
             font-size: 24px;
+
             margin-top: 25px;
+
             margin-bottom: 10px;
         }
 
+
+        /* ===== TEXTOS ===== */
+
         section p {
             color: #cbd5e1;
+
             margin-bottom: 15px;
+
             text-align: justify;
         }
 
-        /* ===== CARDS DOS PROJETOS ===== */
-        .projetos {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-            margin-top: 25px;
-        }
-
-        .card {
-            background: #0f172a;
-            padding: 25px;
-            border-radius: 15px;
-            border: 1px solid #334155;
-            transition: 0.3s;
-        }
-
-        .card:hover {
-            transform: translateY(-6px);
-            border-color: #60a5fa;
-            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.2);
-        }
-
-        .card h3 {
-            color: #60a5fa;
-            margin-top: 0;
-        }
-
-        .card p {
-            font-size: 15px;
-            text-align: left;
-        }
 
         /* ===== DESTAQUE ===== */
+
         .destaque {
-            background: linear-gradient(135deg, #172554, #312e81);
+            background:
+                linear-gradient(
+                    135deg,
+                    #172554,
+                    #312e81
+                );
+
             border: 1px solid #6366f1;
         }
 
@@ -142,67 +163,396 @@
             color: #c4b5fd;
         }
 
+
+        /* ===== CARDS DOS PROJETOS ===== */
+
+        .projetos {
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(280px, 1fr));
+
+            gap: 20px;
+
+            margin-top: 25px;
+        }
+
+        .card {
+            background: #0f172a;
+
+            padding: 25px;
+
+            border-radius: 15px;
+
+            border: 1px solid #334155;
+
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+
+            border-color: #60a5fa;
+
+            box-shadow:
+                0 10px 25px rgba(37, 99, 235, 0.2);
+        }
+
+        .card h3 {
+            color: #60a5fa;
+
+            margin-top: 0;
+        }
+
+        .card p {
+            font-size: 15px;
+
+            text-align: left;
+        }
+
+
+        /* ===== IMAGEM DA BIOGRAFIA ===== */
+
+        .imagem-biografia {
+            width: 100%;
+
+            max-width: 850px;
+
+            height: 350px;
+
+            object-fit: cover;
+
+            display: block;
+
+            margin: 25px auto;
+
+            border-radius: 18px;
+
+            border: 2px solid #334155;
+
+            box-shadow:
+                0 10px 30px rgba(0, 0, 0, 0.35);
+
+            transition: 0.3s;
+        }
+
+        .imagem-biografia:hover {
+            transform: scale(1.02);
+
+            border-color: #60a5fa;
+        }
+
+
+        /* ===== GALERIA DE IMAGENS ===== */
+
+        .galeria {
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(220px, 1fr));
+
+            gap: 20px;
+
+            margin-top: 30px;
+        }
+
+        .galeria img {
+            width: 100%;
+
+            height: 220px;
+
+            object-fit: cover;
+
+            border-radius: 15px;
+
+            border: 2px solid #334155;
+
+            transition: 0.3s;
+        }
+
+        .galeria img:hover {
+            transform: scale(1.04);
+
+            border-color: #60a5fa;
+
+            box-shadow:
+                0 10px 25px rgba(37, 99, 235, 0.25);
+        }
+
+
+        /* ===== LEGENDA DAS IMAGENS ===== */
+
+        .legenda {
+            text-align: center !important;
+
+            color: #94a3b8 !important;
+
+            font-size: 14px;
+
+            margin-top: 8px;
+        }
+
+
+        /* ===== VÍDEO ===== */
+
+        .video-container {
+            margin-top: 40px;
+
+            text-align: center;
+        }
+
+        .video-container h3 {
+            margin-bottom: 18px;
+        }
+
+        .video-container video {
+            width: 100%;
+
+            max-width: 850px;
+
+            border-radius: 18px;
+
+            border: 2px solid #334155;
+
+            box-shadow:
+                0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+
+
+        /* ===== ÁREAS DO PROJETO ===== */
+
+        .areas {
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(200px, 1fr));
+
+            gap: 15px;
+
+            margin-top: 25px;
+        }
+
+        .area {
+            padding: 20px;
+
+            text-align: center;
+
+            background: #0f172a;
+
+            border-radius: 15px;
+
+            border: 1px solid #334155;
+
+            transition: 0.3s;
+        }
+
+        .area:hover {
+            transform: scale(1.04);
+
+            border-color: #6366f1;
+        }
+
+        .area .icone {
+            font-size: 35px;
+
+            display: block;
+
+            margin-bottom: 8px;
+        }
+
+        .area strong {
+            color: #e0e7ff;
+        }
+
+
+        /* ===== CONCLUSÃO ===== */
+
+        .conclusao {
+            text-align: center;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #0f172a,
+                    #172554
+                );
+        }
+
+        .conclusao h2 {
+            border-left: none;
+
+            text-align: center;
+
+            padding-left: 0;
+        }
+
+        .conclusao p {
+            text-align: center;
+
+            max-width: 800px;
+
+            margin-left: auto;
+
+            margin-right: auto;
+        }
+
+
         /* ===== RODAPÉ ===== */
+
         footer {
             background: #020617;
+
             text-align: center;
-            padding: 30px 20px;
+
+            padding: 35px 20px;
+
             margin-top: 50px;
+
             color: #94a3b8;
+
             border-top: 1px solid #334155;
+        }
+
+        footer p {
+            margin-bottom: 8px;
         }
 
         footer strong {
             color: #60a5fa;
         }
 
+
         /* ===== RESPONSIVIDADE ===== */
+
         @media (max-width: 600px) {
+
             header h1 {
-                font-size: 35px;
+                font-size: 38px;
+            }
+
+            header p {
+                font-size: 16px;
             }
 
             nav a {
                 display: inline-block;
-                margin: 5px 8px;
-                font-size: 14px;
+
+                margin: 4px;
+
+                font-size: 13px;
             }
 
             section {
                 padding: 22px;
             }
+
+            section h2 {
+                font-size: 26px;
+            }
+
+            .imagem-biografia {
+                height: 250px;
+            }
+
+            .galeria img {
+                height: 200px;
+            }
+
         }
+
     </style>
+
 </head>
+
 
 <body>
 
-    <!-- CABEÇALHO -->
+
+    <!-- ========================================
+         CABEÇALHO
+    ========================================= -->
+
     <header>
+
         <h1>🚀 Portfólio 2º B</h1>
-        <p>Ciência, Tecnologia, Robótica e Programação</p>
+
+        <p>
+            Ciência, Tecnologia, Robótica e Programação
+        </p>
+
+        <p>
+            Projeto Integrador — 2º Trimestre
+        </p>
+
     </header>
 
-    <!-- MENU -->
+
+
+    <!-- ========================================
+         MENU DE NAVEGAÇÃO
+    ========================================= -->
+
     <nav>
-        <a href="#biografia">Biografia</a>
-        <a href="#projeto">Projeto Integrador</a>
-        <a href="#robotica">Robótica</a>
-        <a href="#fisica">Física</a>
-        <a href="#programacao">Programação</a>
+
+        <a href="#biografia">
+            👥 Biografia
+        </a>
+
+        <a href="#projeto">
+            🧠 Projeto Integrador
+        </a>
+
+        <a href="#robotica">
+            🤖 Robótica
+        </a>
+
+        <a href="#fisica">
+            ⚡ Física
+        </a>
+
+        <a href="#programacao">
+            💻 Programação
+        </a>
+
+        <a href="#conclusao">
+            🌟 Conclusão
+        </a>
+
     </nav>
+
+
 
     <main>
 
-        <!-- BIOGRAFIA -->
+
+        <!-- ========================================
+             BIOGRAFIA
+        ========================================= -->
+
         <section id="biografia">
+
             <h2>👥 Biografia</h2>
+
 
             <p>
                 Olá! Nós somos a turma do 2º B, um grupo dedicado ao
                 desenvolvimento intelectual, à inovação e à aplicação prática
                 do conhecimento científico e tecnológico.
             </p>
+
+
+            <!-- IMAGEM DA TURMA -->
+
+            <img
+                src="imagens/turma.jpg"
+                alt="Foto da turma 2º B durante o Projeto Integrador"
+                class="imagem-biografia"
+            >
+
+            <p class="legenda">
+                📸 Registro da turma durante as atividades do Projeto Integrador.
+            </p>
+
 
             <p>
                 Neste 2º trimestre, estamos explorando o universo do
@@ -211,11 +561,13 @@
                 aplicando esses conhecimentos na construção deste site.
             </p>
 
+
             <p>
                 Cada integrante da turma contribuiu com ideias, criatividade,
                 dedicação e trabalho em equipe para transformar aquilo que
                 aprendemos em sala de aula em projetos reais.
             </p>
+
 
             <p>
                 Mais do que aprender conteúdos, essa experiência nos permitiu
@@ -224,28 +576,37 @@
                 criatividade.
             </p>
 
+
             <p>
                 O resultado de todo o nosso esforço e aprendizado coletivo está
                 reunido aqui. Convidamos você a explorar nosso espaço digital e
                 conhecer um pouco mais sobre os projetos desenvolvidos pela
                 turma 2º B.
             </p>
+
         </section>
 
 
-        <!-- PROJETO INTEGRADOR -->
+
+        <!-- ========================================
+             PROJETO INTEGRADOR
+        ========================================= -->
+
         <section id="projeto" class="destaque">
 
             <h2>🧠 Projeto Integrador</h2>
+
 
             <p>
                 🚀 Bem-vindo ao nosso espaço!
             </p>
 
+
             <p>
                 Aqui compartilhamos a nossa jornada durante o 2º trimestre do
                 Projeto Integrador.
             </p>
+
 
             <p>
                 Esqueça aquela ideia de matérias separadas: neste projeto,
@@ -253,16 +614,19 @@
                 formar um conhecimento integrado.
             </p>
 
+
             <p>
                 Os conteúdos estudados em cada área se complementam e nos
                 ajudam a compreender como a ciência e a tecnologia estão
                 presentes na criação de soluções para problemas reais.
             </p>
 
+
             <p>
                 ✨ O resultado de todo esse processo é este site e todos os
                 projetos que desenvolvemos durante as aulas.
             </p>
+
 
             <p>
                 Ao longo dessa jornada, aprendemos que errar também faz parte
@@ -271,19 +635,83 @@
                 uma ideia em realidade.
             </p>
 
+
+            <!-- ÁREAS -->
+
+            <div class="areas">
+
+                <div class="area">
+
+                    <span class="icone">
+                        🤖
+                    </span>
+
+                    <strong>
+                        Robótica
+                    </strong>
+
+                </div>
+
+
+                <div class="area">
+
+                    <span class="icone">
+                        ⚡
+                    </span>
+
+                    <strong>
+                        Física
+                    </strong>
+
+                </div>
+
+
+                <div class="area">
+
+                    <span class="icone">
+                        🔬
+                    </span>
+
+                    <strong>
+                        Tecnociência
+                    </strong>
+
+                </div>
+
+
+                <div class="area">
+
+                    <span class="icone">
+                        💻
+                    </span>
+
+                    <strong>
+                        Programação
+                    </strong>
+
+                </div>
+
+            </div>
+
         </section>
 
 
-        <!-- ROBÓTICA -->
+
+        <!-- ========================================
+             ROBÓTICA
+        ========================================= -->
+
         <section id="robotica">
 
             <h2>🤖 Robótica</h2>
+
 
             <p>
                 A Robótica foi uma das principais áreas trabalhadas durante o
                 Projeto Integrador. Por meio dela, conseguimos transformar
                 conceitos teóricos em experiências práticas.
             </p>
+
 
             <p>
                 Trabalhamos com componentes eletrônicos, sensores, LEDs,
@@ -292,16 +720,29 @@
                 função.
             </p>
 
+
             <p>
                 A experiência também ajudou a desenvolver nosso raciocínio
                 lógico, nossa capacidade de solucionar problemas e nossa
                 criatividade.
             </p>
 
+
+
+            <!-- ====================================
+                 CARDS DOS PROJETOS
+            ===================================== -->
+
             <div class="projetos">
 
+
+                <!-- PROJETO 1 -->
+
                 <div class="card">
-                    <h3>🌀 Disco de Newton</h3>
+
+                    <h3>
+                        🌀 Disco de Newton
+                    </h3>
 
                     <p>
                         Experimento voltado à compreensão da decomposição e
@@ -309,11 +750,17 @@
                         observamos como diferentes cores podem se combinar,
                         relacionando conceitos de Física Óptica com a prática.
                     </p>
+
                 </div>
 
 
+                <!-- PROJETO 2 -->
+
                 <div class="card">
-                    <h3>💡 LED Fade-in e Fade-out</h3>
+
+                    <h3>
+                        💡 LED Fade-in e Fade-out
+                    </h3>
 
                     <p>
                         Projeto que utiliza PWM para controlar gradualmente a
@@ -321,11 +768,17 @@
                         efeito de aumento e diminuição da luminosidade,
                         relacionando programação e eletrônica.
                     </p>
+
                 </div>
 
 
+                <!-- PROJETO 3 -->
+
                 <div class="card">
-                    <h3>🎨 LED RGB</h3>
+
+                    <h3>
+                        🎨 LED RGB
+                    </h3>
 
                     <p>
                         Utilizamos um LED RGB para controlar as cores vermelho,
@@ -333,11 +786,17 @@
                         conseguimos produzir diferentes tonalidades através da
                         programação.
                     </p>
+
                 </div>
 
 
+                <!-- PROJETO 4 -->
+
                 <div class="card">
-                    <h3>👁️ Sensor de Presença</h3>
+
+                    <h3>
+                        👁️ Sensor de Presença
+                    </h3>
 
                     <p>
                         Utilizamos sensores para detectar movimentos no
@@ -345,11 +804,17 @@
                         demonstra uma aplicação da tecnologia em sistemas de
                         segurança e automação.
                     </p>
+
                 </div>
 
 
+                <!-- PROJETO 5 -->
+
                 <div class="card">
-                    <h3>🚦 Semáforo</h3>
+
+                    <h3>
+                        🚦 Semáforo
+                    </h3>
 
                     <p>
                         Desenvolvemos uma simulação de semáforo de cruzamento,
@@ -357,11 +822,17 @@
                         representa como sistemas automatizados podem organizar
                         o trânsito e aumentar a segurança.
                     </p>
+
                 </div>
 
 
+                <!-- PROJETO 6 -->
+
                 <div class="card">
-                    <h3>⚠️ Sensor de Gás e Fumaça</h3>
+
+                    <h3>
+                        ⚠️ Sensor de Gás e Fumaça
+                    </h3>
 
                     <p>
                         Projeto destinado ao monitoramento do ambiente.
@@ -370,11 +841,17 @@
                         possível aplicação da tecnologia na prevenção de
                         acidentes.
                     </p>
+
                 </div>
 
 
+                <!-- PROJETO 7 -->
+
                 <div class="card">
-                    <h3>🤖 Robô Seguidor de Linha</h3>
+
+                    <h3>
+                        🤖 Robô Seguidor de Linha
+                    </h3>
 
                     <p>
                         Um dos projetos mais completos do trimestre. O robô
@@ -382,17 +859,145 @@
                         para controlar sua direção, permitindo que ele percorra
                         um caminho de forma automatizada.
                     </p>
+
                 </div>
+
+
+            </div>
+
+
+
+            <!-- ====================================
+                 GALERIA DE FOTOS
+            ===================================== -->
+
+            <h3>
+                📸 Registros das aulas de Robótica
+            </h3>
+
+
+            <p>
+                Durante as aulas de Robótica, tivemos a oportunidade de colocar
+                nossos conhecimentos em prática. Os registros abaixo mostram
+                alguns dos momentos de montagem, programação e testes realizados
+                durante o desenvolvimento dos projetos.
+            </p>
+
+
+            <div class="galeria">
+
+
+                <!-- FOTO 1 -->
+
+                <div>
+
+                    <img
+                        src="imagens/robotica.jpg"
+                        alt="Turma realizando atividade de Robótica"
+                    >
+
+                    <p class="legenda">
+                        🤖 Atividade de Robótica
+                    </p>
+
+                </div>
+
+
+                <!-- FOTO 2 -->
+
+                <div>
+
+                    <img
+                        src="imagens/disco-newton.jpg"
+                        alt="Projeto Disco de Newton"
+                    >
+
+                    <p class="legenda">
+                        🌀 Disco de Newton
+                    </p>
+
+                </div>
+
+
+                <!-- FOTO 3 -->
+
+                <div>
+
+                    <img
+                        src="imagens/led-rgb.jpg"
+                        alt="Projeto utilizando LED RGB"
+                    >
+
+                    <p class="legenda">
+                        🎨 LED RGB
+                    </p>
+
+                </div>
+
+
+                <!-- FOTO 4 -->
+
+                <div>
+
+                    <img
+                        src="imagens/robo.jpg"
+                        alt="Robô seguidor de linha"
+                    >
+
+                    <p class="legenda">
+                        🤖 Robô Seguidor de Linha
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ====================================
+                 VÍDEO
+            ===================================== -->
+
+            <div class="video-container">
+
+                <h3>
+                    🎥 Vídeo — Aula de Robótica
+                </h3>
+
+
+                <video controls>
+
+                    <source
+                        src="videos/robotica.mp4"
+                        type="video/mp4"
+                    >
+
+                    Seu navegador não suporta a reprodução de vídeos.
+
+                </video>
+
+
+                <p class="legenda">
+                    🎬 Registro de uma das atividades realizadas
+                    durante as aulas de Robótica.
+                </p>
 
             </div>
 
         </section>
 
 
-        <!-- FÍSICA E TECNOCIÊNCIA -->
+
+        <!-- ========================================
+             FÍSICA E TECNOCIÊNCIA
+        ========================================= -->
+
         <section id="fisica">
 
-            <h2>⚡ Física e Tecnociência</h2>
+            <h2>
+                ⚡ Física e Tecnociência
+            </h2>
+
 
             <p>
                 A Física esteve presente em diversos projetos desenvolvidos
@@ -401,11 +1006,13 @@
                 aplicados diretamente na tecnologia.
             </p>
 
+
             <p>
                 Conceitos relacionados à luz, movimento, eletricidade, energia,
                 velocidade e sensores foram importantes para compreender como
                 nossos projetos funcionavam.
             </p>
+
 
             <p>
                 A Tecnociência também teve um papel importante, pois mostrou
@@ -413,6 +1020,7 @@
                 Atualmente, muitos avanços tecnológicos surgem justamente da
                 união entre conhecimento científico, criatividade e inovação.
             </p>
+
 
             <p>
                 Durante o projeto, percebemos que a tecnologia não serve apenas
@@ -424,15 +1032,23 @@
         </section>
 
 
-        <!-- PROGRAMAÇÃO -->
+
+        <!-- ========================================
+             PROGRAMAÇÃO
+        ========================================= -->
+
         <section id="programacao">
 
-            <h2>💻 Programação</h2>
+            <h2>
+                💻 Programação
+            </h2>
+
 
             <p>
                 A programação foi essencial para transformar nossas ideias em
                 sistemas que realmente funcionam.
             </p>
+
 
             <p>
                 Durante as atividades, tivemos contato com lógica de
@@ -440,17 +1056,20 @@
                 necessárias para controlar componentes eletrônicos.
             </p>
 
+
             <p>
                 Além disso, aprendemos os primeiros conceitos de desenvolvimento
                 web utilizando HTML. Com ele, conseguimos estruturar textos,
                 títulos, seções e informações para criar este portfólio.
             </p>
 
+
             <p>
                 Também percebemos que programar envolve muito mais do que
                 escrever códigos. É necessário pensar em uma solução, testar,
                 identificar erros, corrigir problemas e tentar novamente.
             </p>
+
 
             <p>
                 🚀 O desenvolvimento deste site representa justamente essa
@@ -462,10 +1081,17 @@
         </section>
 
 
-        <!-- CONCLUSÃO -->
-        <section>
 
-            <h2>🌟 O que aprendemos</h2>
+        <!-- ========================================
+             CONCLUSÃO
+        ========================================= -->
+
+        <section id="conclusao" class="conclusao">
+
+            <h2>
+                🌟 O que aprendemos
+            </h2>
+
 
             <p>
                 Ao longo do trimestre, tivemos a oportunidade de aprender não
@@ -473,11 +1099,13 @@
                 utilizadas em diferentes situações.
             </p>
 
+
             <p>
                 Aprendemos que trabalhar em equipe, compartilhar ideias,
                 respeitar diferentes opiniões e buscar soluções são partes
                 fundamentais para desenvolver um bom projeto.
             </p>
+
 
             <p>
                 Nosso maior aprendizado foi perceber que ciência, tecnologia e
@@ -485,18 +1113,32 @@
                 projetos reais.
             </p>
 
+
             <p>
                 Este portfólio representa uma parte da nossa trajetória e de
                 tudo que construímos juntos durante o 2º trimestre.
             </p>
 
+
+            <p>
+                🚀 Aprender, testar, errar e tentar novamente fez parte de
+                cada etapa do nosso projeto. No final, conseguimos transformar
+                conhecimento em experiências práticas e ideias em projetos.
+            </p>
+
         </section>
+
 
     </main>
 
 
-    <!-- RODAPÉ -->
+
+    <!-- ========================================
+         RODAPÉ
+    ========================================= -->
+
     <footer>
+
         <p>
             🚀 <strong>Turma 2º B</strong> — Projeto Integrador
         </p>
@@ -506,9 +1148,12 @@
         </p>
 
         <p>
-            © 2026 - Todos os projetos desenvolvidos pela turma.
+            © 2026 — Todos os projetos desenvolvidos pela turma.
         </p>
+
     </footer>
 
+
 </body>
+
 </html>
